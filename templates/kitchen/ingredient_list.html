@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Ingredients:</h1>
+  {% if ingredient_list %}
+      {% for ingredient in ingredient_list %}
+        {{ ingredient.name }},
+      {% endfor %}
+  {% else %}
+    <p>No ingredients</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,44 @@
+[
+    {
+        "model": "kitchen.dishtype",
+        "pk": 1,
+        "fields": {
+            "name": "Appetizer"
+        }
+    },
+    {
+        "model": "kitchen.dishtype",
+        "pk": 2,
+        "fields": {
+            "name": "Main Course"
+        }
+    },
+    {
+        "model": "kitchen.dishtype",
+        "pk": 3,
+        "fields": {
+            "name": "Dessert"
+        }
+    },
+    {
+        "model": "kitchen.ingredient",
+        "pk": 1,
+        "fields": {
+            "name": "Tomato"
+        }
+    },
+    {
+        "model": "kitchen.ingredient",
+        "pk": 2,
+        "fields": {
+            "name": "Cheese"
+        }
+    },
+    {
+        "model": "kitchen.ingredient",
+        "pk": 3,
+        "fields": {
+            "name": "Basil"
+        }
+    }
+]
