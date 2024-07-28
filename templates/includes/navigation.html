@@ -1,4 +1,6 @@
 <a class="menu-item" href="#">Menu</a>
+{% if user.is_authenticated %}
 <a class="menu-item" href="{% url 'kitchen:ingredient-list' %}">Ingredients</a>
+{% endif %}
 <a class="menu-item" href="{% url 'kitchen:dish-type-list' %}">Type of dishes</a>
 <a class="menu-item" href="#">Cooks</a>
