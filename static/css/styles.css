@@ -1,0 +1,50 @@
+
+.Natural-White—Shades-1-hex { color: #EEECE5; }
+.Natural-White—Shades-2-hex { color: #787773; }
+.Natural-White—Shades-3-hex { color: #F7F5ED; }
+.Natural-White—Shades-4-hex { color: #383836; }
+.Natural-White—Shades-5-hex { color: #DEDCD5; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #F7F5ED;
+}
+
+.nav {
+    width: 200px;
+    background-color: #f4f4f4;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nav .menu-item {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav .menu-item:hover {
+    background-color: #383836;
+    color: white;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.auth-info {
+    background: white;
+}
