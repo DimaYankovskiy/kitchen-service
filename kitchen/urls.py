@@ -2,12 +2,16 @@ from django.contrib.auth import views as auth_views
 from django.urls import path
 
 from kitchen.views import DishTypeListView, IngredientListView, DishListView, DishDetailedView, DishUpdateView, \
-    DishCreateView, DishDeleteView
+    DishCreateView, DishDeleteView, IngredientCreateView, IngredientUpdateView, IngredientDeleteView
 
 urlpatterns = [
     # path("", index, name="index"),
     path("dish-types/", DishTypeListView.as_view(), name="dish-type-list"),
     path("ingredients/", IngredientListView.as_view(), name="ingredient-list"),
+    path("ingredient/create/", IngredientCreateView.as_view(), name="ingredient-create"),
+    path("ingredient/<int:pk>/update/", IngredientUpdateView.as_view(), name="ingredient-update"),
+    path("ingredient/<int:pk>/delete/", IngredientDeleteView.as_view(), name="ingredient-delete"),
+
     path("", DishListView.as_view(), name="dish-list"),
     path("dish/<int:pk>/", DishDetailedView.as_view(), name="dish-detail"),
     path("dish/create/", DishCreateView.as_view(), name="dish-create"),

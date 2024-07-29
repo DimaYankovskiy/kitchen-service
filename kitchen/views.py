@@ -21,6 +21,26 @@ class IngredientListView(generic.ListView):
     success_url = reverse_lazy("kitchen:ingredient-list")
 
 
+class IngredientCreateView(generic.CreateView):
+    model = Ingredient
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:ingredient-list")
+    template_name = "kitchen/ingredient_form.html"
+
+
+class IngredientUpdateView(generic.UpdateView):
+    model = Ingredient
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:ingredient-list")
+    template_name = "kitchen/ingredient_form.html"
+
+
+class IngredientDeleteView(generic.DeleteView):
+    model = Ingredient
+    success_url = reverse_lazy("kitchen:ingredient-list")
+    template_name = "kitchen/ingredient_confirm_delete.html"
+
+
 class DishListView(generic.ListView):
     model = Dish
     template_name = "kitchen/dish_list.html"
