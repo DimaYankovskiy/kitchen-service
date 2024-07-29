@@ -1,9 +1,8 @@
 <div class="auth-info">
   {% if user.is_authenticated %}
-    User: {{ user.username }}
-    <br>
-    <a href="{% url 'logout' %}">Logout</a>
+    <span class="auth-info-user">User: {{ user.username }}</span>
+    <a href="{% url 'logout' %}" class="auth-info-link">Logout</a>
   {% else %}
-    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'login' %}" class="auth-info-link">Login</a>
   {% endif %}
 </div>

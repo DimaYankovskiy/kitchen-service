@@ -90,7 +90,10 @@ class DishUpdateView(LoginRequiredMixin, generic.UpdateView):
     template_name = "kitchen/dish_form.html"
 
     def get_success_url(self):
-        return reverse_lazy("kitchen:dish-detail", kwargs={"pk": self.object.pk})
+        return reverse_lazy(
+            "kitchen:dish-detail",
+            kwargs={"pk": self.object.pk}
+        )
 
 
 class DishDeleteView(LoginRequiredMixin, generic.DeleteView):
