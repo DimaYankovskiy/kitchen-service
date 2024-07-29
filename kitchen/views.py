@@ -34,3 +34,17 @@ class DishDetailedView(generic.DetailView):
     queryset = (Dish
                 .objects.select_related("dish_type")
                 .prefetch_related("cooks", "ingredients"))
+
+
+class DishCreateView(generic.CreateView):
+    model = Dish
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:dish-list")
+    template_name = "kitchen/dish_form.html"
+
+
+class DishUpdateView(generic.UpdateView):
+    model = Dish
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:dish-list")
+    template_name = "kitchen/dish_form.html"

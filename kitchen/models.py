@@ -38,7 +38,7 @@ class Dish(models.Model):
 class DishIngredient(models.Model):
     dish = models.ForeignKey(Dish, on_delete=models.CASCADE)
     ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE)
-    ingredient_mass = models.IntegerField()
+    ingredient_mass = models.IntegerField(default=0)
 
     def __str__(self):
-        return f"{self.ingredient.name} in {self.dish.name}"
+        return f"{self.ingredient.name} ({self.ingredient_mass}g)"
