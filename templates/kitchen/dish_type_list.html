@@ -2,11 +2,18 @@
 
 {% block content %}
   <h1>Type of dishes:</h1>
+  <a href="{% url 'kitchen:dish_type-create' %}" class="ingredient-add" >➕</a>
   {% if dishtype_list %}
       {% for dish_type in dishtype_list %}
-        {{ dish_type.name }},
+        <div class="ingredient-item">
+        <span class="ingredient-name">{{ dish_type.name }}</span>
+        <span class="ingredient-actions">
+          <a href="{% url 'kitchen:dish_type-update' dish_type.pk %}" class="ingredient-edit">✏️</a>
+          <a href="{% url 'kitchen:dish_type-delete' dish_type.pk %}" class="ingredient-delete">❌</a>
+        </span>
+      </div>
       {% endfor %}
   {% else %}
-    <p>No type of dishes</p>
+    <p>No types of dishes</p>
   {% endif %}
 {% endblock %}

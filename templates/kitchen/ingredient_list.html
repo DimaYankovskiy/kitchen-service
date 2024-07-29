@@ -2,17 +2,17 @@
 
 {% block content %}
   <h1>Ingredients:</h1>
-  <a href="{% url 'kitchen:ingredient-create' %}" class="ingredient-add" >➕</a>
+  <a href="{% url 'kitchen:ingredient-create' %}" class="ingredient-add">➕</a>
   {% if ingredient_list %}
-      {% for ingredient in ingredient_list %}
-        <div class="ingredient-item">
+    {% for ingredient in ingredient_list %}
+      <div class="ingredient-item">
         <span class="ingredient-name">{{ ingredient.name }}</span>
         <span class="ingredient-actions">
           <a href="{% url 'kitchen:ingredient-update' ingredient.pk %}" class="ingredient-edit">✏️</a>
           <a href="{% url 'kitchen:ingredient-delete' ingredient.pk %}" class="ingredient-delete">❌</a>
         </span>
       </div>
-      {% endfor %}
+    {% endfor %}
   {% else %}
     <p>No ingredients</p>
   {% endif %}

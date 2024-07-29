@@ -12,7 +12,27 @@ def index(request):
 class DishTypeListView(generic.ListView):
     model = DishType
     template_name = "kitchen/dish_type_list.html"
-    success_url = reverse_lazy("kitchen:dish-type-list")
+    success_url = reverse_lazy("kitchen:dish_type-list")
+
+
+class DishTypeCreateView(generic.CreateView):
+    model = DishType
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:dish_type-list")
+    template_name = "kitchen/dishtype_form.html"
+
+
+class DishTypeUpdateView(generic.UpdateView):
+    model = DishType
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:dish_type-list")
+    template_name = "kitchen/dishtype_form.html"
+
+
+class DishTypeDeleteView(generic.DeleteView):
+    model = DishType
+    success_url = reverse_lazy("kitchen:dish_type-list")
+    template_name = "kitchen/dishtype_confirm_delete.html"
 
 
 class IngredientListView(generic.ListView):
