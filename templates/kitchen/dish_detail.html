@@ -20,11 +20,14 @@
       </ul>
       <h3>Ingredients:</h3>
       <ul>
-        {% for dish_ingredient in dish.dishingredient_set.all %}
-          <li>{{ dish_ingredient }}</li>
+        {% for ingredient in dish.ingredients.all %}
+          <li>{{ ingredient.name }}</li>
         {% endfor %}
       </ul>
-      <a href="{% url 'kitchen:dish-update' pk=dish.id %}">Update</a>
+      <div class="dish-actions">
+        <a href="{% url 'kitchen:dish-update' pk=dish.pk %}" class="btn btn-update">Update</a>
+        <a href="{% url 'kitchen:dish-delete' pk=dish.pk %}" class="btn btn-delete">Delete</a>
+      </div>
     </div>
   </div>
 {% endblock %}

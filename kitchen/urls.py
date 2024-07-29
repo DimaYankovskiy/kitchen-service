@@ -1,8 +1,8 @@
-from django.urls import path
 from django.contrib.auth import views as auth_views
+from django.urls import path
 
-from kitchen.views import index, DishTypeListView, IngredientListView, DishListView, DishDetailedView, DishUpdateView, \
-    DishCreateView
+from kitchen.views import DishTypeListView, IngredientListView, DishListView, DishDetailedView, DishUpdateView, \
+    DishCreateView, DishDeleteView
 
 urlpatterns = [
     # path("", index, name="index"),
@@ -12,6 +12,7 @@ urlpatterns = [
     path("dish/<int:pk>/", DishDetailedView.as_view(), name="dish-detail"),
     path("dish/create/", DishCreateView.as_view(), name="dish-create"),
     path("dish/<int:pk>/update/", DishUpdateView.as_view(), name="dish-update"),
+    path("dish/<int:pk>/delete/", DishDeleteView.as_view(), name="dish-delete"),
 
 
     path("login/", auth_views.LoginView.as_view(), name="login"),

@@ -5,6 +5,12 @@
   <h1>Menu:</h1>
   {% if dish_list %}
     <div class="dishes">
+      <div class="dish-item add-dish">
+        <a class="dishes-url" href="{% url 'kitchen:dish-create' %}">
+          <div class="add-dish-icon">+</div>
+          <div class="add-dish-text">Add Dish</div>
+        </a>
+      </div>
       {% for dish in dish_list %}
         <div class="dish-item">
           <a class="dishes-url" href="{% url 'kitchen:dish-detail' dish.pk %}">
