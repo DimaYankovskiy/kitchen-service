@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="dish-detail">
+    <img src="{% static 'images/default_dish.png' %}" alt="image"/>
+    <div class="dish-detail-details">
+      <div class="dish-detail-name">{{ dish.name }}</div>
+      <div class="dish-price">Price: ${{ dish.price }}</div>
+      <p>
+        <b>Dish type:</b> {{ dish.dish_type.name }}
+        <br>
+        <b>Description:</b> {{ dish.description }}
+      </p>
+      <h3>Cooks:</h3>
+      <ul>
+        {% for cook in dish.cooks.all %}
+          <li>{{ cook.username }} ({{ cook.years_of_experience }} years of experience)</li>
+        {% endfor %}
+      </ul>
+      <h3>Ingredients:</h3>
+      <ul>
+        {% for ingredient in dish.ingredients.all %}
+          <li>{{ ingredient.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

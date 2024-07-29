@@ -1,6 +1,6 @@
-<a class="menu-item" href="#">Menu</a>
+<a class="nav-item" href="{% url 'kitchen:dish-list' %}">Menu</a>
 {% if user.is_authenticated %}
-<a class="menu-item" href="{% url 'kitchen:ingredient-list' %}">Ingredients</a>
+<a class="nav-item" href="{% url 'kitchen:ingredient-list' %}">Ingredients</a>
 {% endif %}
-<a class="menu-item" href="{% url 'kitchen:dish-type-list' %}">Type of dishes</a>
-<a class="menu-item" href="#">Cooks</a>
+<a class="nav-item" href="{% url 'kitchen:dish-type-list' %}">Type of dishes</a>
+<a class="nav-item" href="#">Cooks</a>

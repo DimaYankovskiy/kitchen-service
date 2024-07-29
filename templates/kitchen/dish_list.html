@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <h1>Menu:</h1>
+  {% if dish_list %}
+    <div class="dishes">
+      {% for dish in dish_list %}
+        <div class="dish-item">
+          <a class="dishes-url" href="{% url 'kitchen:dish-detail' dish.pk %}">
+            <img src="{% static 'images/default_dish.png' %}" alt="image"/>
+            <div class="dish-details">
+              <div class="dish-name">{{ dish.name }}</div>
+              <div class="dish-price">${{ dish.price }}</div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>Menu is empty</p>
+  {% endif %}
+{% endblock %}

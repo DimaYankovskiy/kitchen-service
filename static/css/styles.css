@@ -1,10 +1,3 @@
-
-.Natural-White—Shades-1-hex { color: #EEECE5; }
-.Natural-White—Shades-2-hex { color: #787773; }
-.Natural-White—Shades-3-hex { color: #F7F5ED; }
-.Natural-White—Shades-4-hex { color: #383836; }
-.Natural-White—Shades-5-hex { color: #DEDCD5; }
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -25,7 +18,7 @@ body {
     justify-content: flex-start;
 }
 
-.nav .menu-item {
+.nav .nav-item {
     display: block;
     padding: 10px;
     color: #333;
@@ -34,7 +27,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.nav .menu-item:hover {
+.nav .nav-item:hover {
     background-color: #383836;
     color: white;
 }
@@ -47,4 +40,114 @@ body {
 
 .auth-info {
     background: white;
+}
+
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.dish-item {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.dish-item:hover {
+    transform: translateY(-5px);
+}
+
+.dish-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.dish-details {
+    padding: 10px;
+}
+
+.dish-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.dish-price {
+    color: #888;
+}
+
+.dishes-url {
+    text-decoration: none;
+}
+
+/*dish detail*/
+
+.dish-detail {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f4f4f4;
+}
+
+.dish-detail img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.dish-detail-details {
+    flex: 1;
+}
+
+.dish-detail-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dish-description {
+    margin-bottom: 10px;
+}
+
+.dish-detail-price {
+    color: #888;
+    font-size: 1.5em;
+}
+
+.dish-type {
+    font-style: italic;
+}
+
+.dish-cooks, .dish-ingredients {
+    margin-top: 20px;
+}
+
+.dish-description {
+    margin-bottom: 10px;
+}
+
+.dish-detail-price {
+    color: #888;
+    font-size: 1.5em;
+}
+
+.dish-type {
+    font-style: italic;
+}
+
+.dish-cooks, .dish-ingredients {
+    margin-top: 20px;
 }
