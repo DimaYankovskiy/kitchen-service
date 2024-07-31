@@ -18,14 +18,12 @@ class DishTypeListView(generic.ListView):
 
 class DishTypeCreateView(LoginRequiredMixin, generic.CreateView):
     model = DishType
-    fields = "__all__"
     success_url = reverse_lazy("kitchen:dish_type-list")
     template_name = "kitchen/dishtype_form.html"
 
 
 class DishTypeUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = DishType
-    fields = "__all__"
     success_url = reverse_lazy("kitchen:dish_type-list")
     template_name = "kitchen/dishtype_form.html"
 
@@ -44,14 +42,12 @@ class IngredientListView(generic.ListView):
 
 class IngredientCreateView(LoginRequiredMixin, generic.CreateView):
     model = Ingredient
-    fields = "__all__"
     success_url = reverse_lazy("kitchen:ingredient-list")
     template_name = "kitchen/ingredient_form.html"
 
 
 class IngredientUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Ingredient
-    fields = "__all__"
     success_url = reverse_lazy("kitchen:ingredient-list")
     template_name = "kitchen/ingredient_form.html"
 
@@ -79,14 +75,12 @@ class DishDetailedView(generic.DetailView):
 
 class DishCreateView(LoginRequiredMixin, generic.CreateView):
     model = Dish
-    fields = "__all__"
     success_url = reverse_lazy("kitchen:dish-list")
     template_name = "kitchen/dish_form.html"
 
 
 class DishUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Dish
-    fields = "__all__"
     template_name = "kitchen/dish_form.html"
 
     def get_success_url(self):
