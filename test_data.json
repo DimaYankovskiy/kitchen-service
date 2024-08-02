@@ -1,0 +1,109 @@
+[
+    {
+        "model": "kitchen.dishtype",
+        "pk": 1,
+        "fields": {
+            "name": "Appetizer"
+        }
+    },
+    {
+        "model": "kitchen.dishtype",
+        "pk": 2,
+        "fields": {
+            "name": "Main Course"
+        }
+    },
+    {
+        "model": "kitchen.dishtype",
+        "pk": 3,
+        "fields": {
+            "name": "Dessert"
+        }
+    },
+    {
+        "model": "kitchen.ingredient",
+        "pk": 1,
+        "fields": {
+            "name": "Tomato"
+        }
+    },
+    {
+        "model": "kitchen.ingredient",
+        "pk": 2,
+        "fields": {
+            "name": "Cheese"
+        }
+    },
+    {
+        "model": "kitchen.ingredient",
+        "pk": 3,
+        "fields": {
+            "name": "Basil"
+        }
+    },
+    {
+        "model": "kitchen.cook",
+        "pk": 1,
+        "fields": {
+            "username": "chef1",
+            "password": "hashed_password1",
+            "years_of_experience": 5
+        }
+    },
+    {
+        "model": "kitchen.cook",
+        "pk": 2,
+        "fields": {
+            "username": "chef2",
+            "password": "hashed_password2",
+            "years_of_experience": 10
+        }
+    },
+    {
+        "model": "kitchen.dish",
+        "pk": 1,
+        "fields": {
+            "name": "Bruschetta",
+            "description": "Grilled bread with tomato and basil.",
+            "price": "5.00",
+            "dish_type": 1
+        }
+    },
+    {
+        "model": "kitchen.dish",
+        "pk": 2,
+        "fields": {
+            "name": "Lasagna",
+            "description": "Layered pasta with meat and cheese.",
+            "price": "12.00",
+            "dish_type": 2
+        }
+    },
+    {
+        "model": "kitchen.dishingredient",
+        "pk": 1,
+        "fields": {
+            "dish": 1,
+            "ingredient": 1,
+            "ingredient_mass": 100
+        }
+    },
+    {
+        "model": "kitchen.dishingredient",
+        "pk": 2,
+        "fields": {
+            "dish": 1,
+            "ingredient": 3,
+            "ingredient_mass": 50
+        }
+    },
+    {
+        "model": "kitchen.dishingredient",
+        "pk": 3,
+        "fields": {
+            "dish": 2,
+            "ingredient": 2,
+            "ingredient_mass": 200
+        }
+    }
+]

@@ -1,0 +1,328 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #F7F5ED;
+}
+
+.nav {
+    width: 200px;
+    background-color: #f4f4f4;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nav .nav-item {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav .nav-item:hover {
+    background-color: #383836;
+    color: white;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.auth-info {
+    background: white;
+}
+
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.dish-item {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.dish-item:hover {
+    transform: translateY(-5px);
+}
+
+.dish-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.dish-details {
+    padding: 10px;
+}
+
+.dish-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.dish-price {
+    color: #888;
+}
+
+.dishes-url {
+    text-decoration: none;
+}
+
+/*dish detail*/
+
+.dish-detail {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f4f4f4;
+}
+
+.dish-detail img {
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.dish-detail-details {
+    flex: 1;
+}
+
+.dish-detail-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dish-description {
+    margin-bottom: 10px;
+}
+
+.dish-detail-price {
+    color: #888;
+    font-size: 1.5em;
+}
+
+.dish-type {
+    font-style: italic;
+}
+
+.dish-cooks, .dish-ingredients {
+    margin-top: 20px;
+}
+
+.dish-description {
+    margin-bottom: 10px;
+}
+
+.dish-detail-price {
+    color: #888;
+    font-size: 1.5em;
+}
+
+.dish-type {
+    font-style: italic;
+}
+
+.dish-cooks, .dish-ingredients {
+    margin-top: 20px;
+}
+
+.add-dish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+}
+
+.add-dish-icon {
+    font-size: 50px;
+    font-weight: bold;
+    color: #888;
+}
+
+.add-dish-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #888;
+}
+
+.add-dish:hover .add-dish-icon,
+.add-dish:hover .add-dish-text {
+    color: #333;
+}
+
+.dish-actions {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-update {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-update:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+}
+
+/* dish confirm delete*/
+
+.delete-confirmation {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.delete-confirmation h1 {
+    color: #f44336;
+}
+
+.delete-confirmation p {
+    margin: 20px 0;
+}
+
+.delete-confirmation .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+.delete-confirmation .btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-confirmation .btn-delete:hover {
+    background-color: #da190b;
+}
+
+.delete-confirmation .btn-cancel {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-confirmation .btn-cancel:hover {
+    background-color: #45a049;
+}
+
+/* ingredients */
+
+.ingredient-list {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.ingredient-header, .ingredient-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ingredient-header {
+    font-weight: bold;
+}
+
+.ingredient-name {
+    flex: 1;
+}
+
+.ingredient-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.ingredient-add, .ingredient-edit, .ingredient-delete {
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.ingredient-add:hover, .ingredient-edit:hover, .ingredient-delete:hover {
+    opacity: 0.7;
+}
+
+/* auth info */
+.auth-info {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-info-user {
+  font-size: 16px;
+  color: #333;
+  margin-right: 15px;
+}
+
+.auth-info-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.auth-info-link:hover {
+  text-decoration: underline;
+}
